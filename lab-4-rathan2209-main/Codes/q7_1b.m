@@ -1,1 +1,22 @@
+% p = 3;
+% p = 0.1;
+% p = 0;
+% p = [0, 0.5];
+% p = [2, -0.5];
+% p = [0.5, -0.5];
+% p = [2, 2, 2];
+% p = [0, 1, 2];
+% p = [-0.5, 1j];
+% p = [0, 1j, -1j];
+% p = [0.5, -0.5, 2+1j, 2-1j];
+p = [1+1j, 1+2j, 1+3j, 2+1j];
 
+[N,ROC,C,S] = roc_cs(p);
+disp("No. of ROC's:");
+disp(N);
+disp("Range of ROC's (r1 r2: r1<|z|<r2)");
+disp(ROC);
+disp("Whether Causal or not (1:Causal,0:Not Causal)");
+disp(C);
+disp("Whether Stable or not (1:Stable,0:Not Stable)");
+disp(S);
