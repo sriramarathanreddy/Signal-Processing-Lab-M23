@@ -1,1 +1,35 @@
+w = -5:0.1:5;
+T = 2;
+a = -T;
+b = T;
 
+syms t;
+xt = 1;
+X = continuousFT(t,xt,a,b,w);
+
+figure;
+subplot(2,2,1);
+plot(w,real(X));
+grid on;
+xlabel("frequency \omega");
+ylabel("Amplitude");
+title("Real Part");
+subplot(2,2,2);
+plot(w,imag(X));
+grid on;
+xlabel("frequency \omega");
+ylabel("Amplitude");
+title("Imaginary Part");
+subplot(2,2,3);
+plot(w,abs(X));
+grid on;
+xlabel("frequency \omega");
+ylabel("Amplitude");
+title("Magnitude Plot");
+subplot(2,2,4);
+plot(w,angle(X));
+grid on;
+xlabel("frequency \omega");
+ylabel("Amplitude");
+title("Phase Plot");
+sgtitle("CTFT of Rectangular pulse of unit amplitude");
